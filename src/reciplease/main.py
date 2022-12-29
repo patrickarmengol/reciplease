@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
-from getmdr import schemas
-from getmdr.conversion import convert_info_to_markdown
-from getmdr.scraping import scrape_recipe_url
+from reciplease import schemas
+from reciplease.conversion import convert_info_to_markdown
+from reciplease.scraping import scrape_recipe_url
 
 app = FastAPI()
 

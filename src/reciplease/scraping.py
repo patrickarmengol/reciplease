@@ -2,7 +2,7 @@ from typing import Any, Callable
 
 from recipe_scrapers import scrape_me
 
-from getmdr.schemas import RecipeInfo
+from reciplease.schemas import RecipeInfo
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0"
@@ -18,12 +18,8 @@ def get_field(field: Callable[[], Any]) -> Any:
 
 
 def scrape_recipe_url(url: str) -> RecipeInfo:
-    # resp = requests.get(url, headers=HEADERS)
-    # if resp.status_code != 200:
-    #     raise ValueError('invalid url; could not get 200 response status code')
-    # # TODO: what if 200 but bad scrape? like an index url
+    # TODO: validate url; exists and points to recipe
 
-    # scraper = scrape_html(str(resp.content), url)
     scraper = scrape_me(url)
 
     try:

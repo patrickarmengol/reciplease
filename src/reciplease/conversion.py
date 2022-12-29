@@ -1,9 +1,11 @@
 import urllib.parse
 
-from getmdr.schemas import RecipeInfo, RecipeMarkdown
+from reciplease.schemas import RecipeInfo, RecipeMarkdown
 
 
 def convert_info_to_markdown(info: RecipeInfo, front_matter: str | None = None) -> RecipeMarkdown:
+    # TODO: figure out better way to handle whitespace; maybe jinja
+
     match front_matter:
         case 'yaml':
             fm = f"""---
