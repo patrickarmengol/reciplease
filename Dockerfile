@@ -2,8 +2,12 @@ FROM python:3.10
 
 WORKDIR /app
 
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
 COPY . /app
 
-RUN python -m venv /opt/venv && . /opt/venv/bin/activate && pip install --upgrade build hatchling && pip install .
+RUN pip install --upgrade build hatchling && pip install .
 
-CMD [".", "/opt/venv/bin/activate", "&&", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "$PORT"]
