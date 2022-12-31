@@ -24,8 +24,9 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-  "fastapi",
-  "recipe-scrapers",
+  "fastapi>=0.88.0",
+  "recipe-scrapers>=14.26.0",
+  "uvicorn>=0.20.0",
 ]
 
 [project.scripts]
