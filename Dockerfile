@@ -11,4 +11,4 @@ COPY . /app
 RUN pip install --upgrade build hatchling && pip install .
 
 # CMD ["uvicorn", "reciplease.main:app", "--host", "0.0.0.0", "--port", "$PORT"]
-CMD "python -m uvicorn reciplease.main:app --host 0.0.0.0 --port $PORT"
+CMD python -m uvicorn reciplease.main:app --host 0.0.0.0 --port $PORT
