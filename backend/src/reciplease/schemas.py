@@ -13,8 +13,8 @@ class RecipeIn(BaseModel):
     front_matter: FMFormat | None = None
 
 
-class RecipeMarkdown(BaseModel):
-    markdown: str
+class RecipeOut(BaseModel):
+    message: str
 
 
 class RecipeInfo(BaseModel):
