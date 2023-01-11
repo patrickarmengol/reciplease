@@ -19,7 +19,7 @@ git clone git@github.com:patrickarmengol/reciplease.git
 cd reciplease/frontend
 
 docker build -t reciplease-frontend .
-docker run -it -p 8080:8080 -e PORT=8080 --rm reciplease-frontend
+docker run -it -p 8080:80 --rm reciplease-frontend
 ```
 
 without docker:
