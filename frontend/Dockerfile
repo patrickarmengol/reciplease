@@ -1,3 +1,6 @@
+# pass env vars into docker env
+ARG VITE_API_URL
+
 # build stage
 FROM node:lts-alpine as build-stage
 WORKDIR /app
