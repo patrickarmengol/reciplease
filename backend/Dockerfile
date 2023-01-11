@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.11-buster
 
 WORKDIR /app
 
@@ -8,6 +8,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 COPY . /app
 
-RUN pip install --upgrade build hatchling && pip install .
+RUN pip install --upgrade pip build hatchling
+RUN pip install .
 
 CMD uvicorn reciplease.main:app --host 0.0.0.0 --port $PORT
