@@ -13,6 +13,10 @@
   <!-- <div v-if="apiResponse">
     <p>{{ apiResponse.message }}</p>
   </div> -->
+  <div>
+    <p>{{ asdf || "asdf" }}</p>
+    <p>{{ zxcv || "zxcv" }}</p>
+  </div>
 </template>
 
 <script>
@@ -26,7 +30,9 @@ export default {
       },
       apiResponse: null,
       errorMessage: null,
-      formStatus: 'idle' // could be 'idle', 'submitting', 'success', 'error'
+      formStatus: 'idle', // could be 'idle', 'submitting', 'success', 'error'
+      asdf: import.meta.env.VITE_API_URL,
+      zxcv: this.$apiUrl
     };
   },
   methods: {
