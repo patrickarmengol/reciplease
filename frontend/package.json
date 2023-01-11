@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
-    "marked": "^4.2.5",
-    "lodash-es": "^4.17.21"
+    "marked": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
