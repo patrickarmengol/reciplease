@@ -4,5 +4,5 @@ import App from './App.vue';
 import './assets/main.css';
 
 
-createApp(App).mount('#app')
+const app = createApp(App).mount('#app');
 app.config.globalProperties.$apiUrl = process.env.VUE_APP_API_URL || 'http://0.0.0.0/5000';
