@@ -61,4 +61,8 @@ export default {
     font-family: 'Fira Code', monospace;
     padding: 20px;
 }
+
+.mdoutput img {
+    width: 30%;
+}
 </style>
