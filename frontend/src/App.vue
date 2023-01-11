@@ -33,7 +33,7 @@ export default {
     async submitForm() {
       this.formStatus = 'submitting'
       try {
-        const response = await fetch("http://127.0.0.1:8000", {
+        const response = await fetch("http://0.0.0.0:5000", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

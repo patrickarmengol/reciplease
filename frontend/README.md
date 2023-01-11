@@ -1,29 +1,45 @@
-# reciplease
+# reciplease frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue.js frontend for **reciplease**
 
-## Recommended IDE Setup
+-----
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+**Table of Contents**
 
-## Customize configuration
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Installation
 
-```sh
+with docker:
+```console
+git clone git@github.com:patrickarmengol/reciplease.git
+cd reciplease/frontend
+
+docker build -t reciplease-frontend .
+docker run -it -p 8080:8080 -e PORT=8080 --rm reciplease-frontend
+```
+
+without docker:
+```console
+git clone git@github.com:patrickarmengol/reciplease.git
+cd reciplease/frontend
+
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
+npm install -g http-server
 npm run build
+http-server dist
 ```
+
+## Usage
+
+submit a recipe URL like https://www.allrecipes.com/recipe/190276/easy-shakshuka/ to the form and view/edit response markdown in the pane below the form
+
+## License
+
+`reciplease` is distributed under the terms of any of the following licenses:
+
+- [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html)
+- [MIT](https://spdx.org/licenses/MIT.html)
