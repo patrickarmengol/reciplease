@@ -2,6 +2,8 @@
 
 FastAPI backend for **reciplease**
 
+[live demo docs](https://reciplease-backend.up.railway.app/docs)
+
 -----
 
 **Table of Contents**
@@ -37,7 +39,7 @@ uvicorn reciplease.main:app --host 0.0.0.0 --port 5000
 
 see generated docs after installation at http://0.0.0.0:5000/docs
 
-or view the [live demo docs]()
+or view the [live demo docs](https://reciplease-backend.up.railway.app/docs)
 
 ## License
 
